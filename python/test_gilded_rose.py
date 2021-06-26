@@ -199,5 +199,42 @@ class GildedRoseTest(unittest.TestCase):
         assert gilded_rose.items[0].sell_in is 1
         assert gilded_rose.items[0].name is 'Aged Brie'
 
+    def test_update_quality_case_six(self):
+        """
+        [One]
+            Conditions:
+                item name is Backstage
+                item has quality < 50
+                item name is Backstage
+                item sell_in > 11
+            Result: 
+                item quality is increased by one
+        [Two]
+            Condition:
+                item name is not Sulfuras
+            Result:
+                item sell_in is decreased by one
+        [Three]
+            Conditions:
+                item sell_in > 0
+            Result:
+                item quality remains the same
+        Test Case:
+            item = Item('Backstage passes to a TAFKAL80ETC concert', sell_in = 15, quality = 40)
+            [One] -> item.quality = 41
+            [Two] -> item.sell_in = 14
+            [Three] -> item.quality = 41
+        Expected Result:
+            item.quality == 41
+            item.sell_in == 14 
+            item.name == Backstage passes to a TAFKAL80ETC concert
+        """
+        items = [Item(name='Backstage passes to a TAFKAL80ETC concert', sell_in=15, quality = 40)]
+        gilded_rose = GildedRose(items)
+        gilded_rose.update_quality()
+        assert gilded_rose.items[0].quality is 41
+        assert gilded_rose.items[0].sell_in is 14
+        assert gilded_rose.items[0].name is 'Backstage passes to a TAFKAL80ETC concert'
+
 if __name__ == '__main__':
     unittest.main()
