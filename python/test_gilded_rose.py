@@ -400,5 +400,45 @@ class GildedRoseTest(unittest.TestCase):
         assert gilded_rose.items[0].sell_in is -1
         assert gilded_rose.items[0].name is 'Sulfuras, Hand of Ragnaros'
 
+    def test_update_quality_case_eleven(self):
+        """
+        [One] 
+            Conditions:
+                item name is not Aged Brie and is not Backstage
+                item has quality < 0
+            Result: 
+                item quality remains the same
+        [Two]
+            Condition:
+                item name is not Sulfuras
+            Result:
+                item sell_in is decreased by one
+        [Three]
+            Conditions:
+                item sell_in is < 0
+                item name is not Aged Brie
+                item name is not Backstage
+                item quality < 0
+            Result:
+                item quality remains the same
+        
+        Test Case:
+            item = Item('Item', sell_in = 0, quality = -1)
+            [One] -> item.quality = -1
+            [Two] -> item.sell_in = -2
+            [Three] -> item.quality = -1
+        
+        Expected Result:
+            item.quality == -1
+            item.sell_in == -2
+            item.name == Item
+        """
+        items = [Item(name='Item', sell_in=-1, quality=-1)]
+        gilded_rose = GildedRose(items)
+        gilded_rose.update_quality()
+        assert gilded_rose.items[0].quality is -1
+        assert gilded_rose.items[0].sell_in is -2
+        assert gilded_rose.items[0].name is 'Item'
+
 if __name__ == '__main__':
     unittest.main()
