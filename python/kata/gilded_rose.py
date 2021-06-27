@@ -17,15 +17,11 @@ class GildedRose:
         for item in self.items:
             if item.name == Goods.CONJURED.value:
                 ConjuredGood(item).update_quality()
-                continue
-            if item.name == Goods.SULFURAs.value:
+            elif item.name == Goods.SULFURAs.value:
                 SulfurasdGood(item).update_quality()
-                continue
-            if item.name == Goods.AGED_BRIE.value:
+            elif item.name == Goods.AGED_BRIE.value:
                 AgedBrie(item).update_quality()
-                continue
-            if item.name == Goods.BACKSTAGE.value:
+            elif item.name == Goods.BACKSTAGE.value:
                 BackstagePassesGood(item).update_quality()
-                continue
             else:
                 AnyGood(item).update_quality()
