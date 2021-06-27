@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-
 from kata.gilded_rose import Item, GildedRose
 
 
