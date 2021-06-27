@@ -1,5 +1,6 @@
 from .goods.conjured_good import ConjuredGood
 from .goods.goods import Goods
+from .goods.sulfuras_good import SulfurasdGood
 
 
 class GildedRose(object):
@@ -10,6 +11,9 @@ class GildedRose(object):
         for item in self.items:
             if item.name == Goods.CONJURED.value:
                 ConjuredGood(item).update_quality()
+                continue
+            if item.name == Goods.SULFURAs.value:
+                SulfurasdGood(item).update_quality()
                 continue
             if (
                 item.name != "Aged Brie"

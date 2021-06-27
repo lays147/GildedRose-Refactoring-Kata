@@ -1,4 +1,5 @@
 import pytest
+
 from kata.gilded_rose import GildedRose
 from kata.item import Item
 
@@ -113,11 +114,11 @@ def test_update_quality_case_two():
         item.sell_in == 2
         item.name == Sulfuras, Hand of Ragnaros
     """
-    items = [Item(name="Sulfuras, Hand of Ragnaros", sell_in=-1, quality=80)]
+    items = [Item(name="Sulfuras, Hand of Ragnaros", sell_in=None, quality=80)]
     gilded_rose = GildedRose(items)
     gilded_rose.update_quality()
     assert gilded_rose.items[0].quality is 80
-    assert gilded_rose.items[0].sell_in is -1
+    assert gilded_rose.items[0].sell_in is None
     assert gilded_rose.items[0].name is "Sulfuras, Hand of Ragnaros"
 
 
@@ -439,11 +440,11 @@ def test_update_quality_case_ten():
         item.sell_in == -1
         item.name == Sulfuras, Hand of Ragnaros
     """
-    items = [Item(name="Sulfuras, Hand of Ragnaros", sell_in=-1, quality=80)]
+    items = [Item(name="Sulfuras, Hand of Ragnaros", sell_in=None, quality=80)]
     gilded_rose = GildedRose(items)
     gilded_rose.update_quality()
     assert gilded_rose.items[0].quality is 80
-    assert gilded_rose.items[0].sell_in is -1
+    assert gilded_rose.items[0].sell_in is None
     assert gilded_rose.items[0].name is "Sulfuras, Hand of Ragnaros"
 
 
