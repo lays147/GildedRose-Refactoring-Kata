@@ -1,3 +1,4 @@
+from .goods.aged_brie_good import AgedBrie
 from .goods.conjured_good import ConjuredGood
 from .goods.goods import Goods
 from .goods.sulfuras_good import SulfurasdGood
@@ -14,6 +15,9 @@ class GildedRose(object):
                 continue
             if item.name == Goods.SULFURAs.value:
                 SulfurasdGood(item).update_quality()
+                continue
+            if item.name == Goods.AGED_BRIE.value:
+                AgedBrie(item).update_quality()
                 continue
             if (
                 item.name != "Aged Brie"
@@ -42,6 +46,3 @@ class GildedRose(object):
                                 item.quality = item.quality - 1
                     else:
                         item.quality = item.quality - item.quality
-                else:
-                    if item.quality < 50:
-                        item.quality = item.quality + 1
