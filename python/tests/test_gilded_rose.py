@@ -1,4 +1,5 @@
-from kata.gilded_rose import Item, GildedRose
+from kata.gilded_rose import GildedRose
+from kata.item import Item
 
 
 def test_foo():

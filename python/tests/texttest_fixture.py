@@ -1,6 +1,7 @@
 from __future__ import print_function
 
-from kata.gilded_rose import *
+from kata.gilded_rose import GildedRose
+from kata.item import Item
 
 if __name__ == "__main__":
     print("OMGHAI!")

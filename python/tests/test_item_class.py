@@ -1,6 +1,6 @@
 import unittest
 
-from kata.gilded_rose import Item
+from kata.item import Item
 
 
 class ItemTest(unittest.TestCase):
