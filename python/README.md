@@ -5,6 +5,7 @@
 01_unit_testing -> Add unit testing for existing code in Python 2.7  
 02_instrumentation -> Add basic instrumentation tools to this project
 03_feat_conjured -> Adding the feature to support conjured Good - Remove support of Python2.7
+04_refactor -> Refactor Gilded Rose
 
 ## Commands
 
@@ -26,8 +27,8 @@ make setup/dev
 make setup/prd
 
 # Run the tests
-test/run
+make test/run
 
 # Format the files
-format/run
+make format/run
 ```
