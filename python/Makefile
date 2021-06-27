@@ -1,11 +1,12 @@
-test/setup:
-	pip install pytest
+setup/dev:
+	poetry install
+
+setup/prd:
+	poetry install --no-dev
 
 test/run:
-	pytest
-
-format/setup:
-	pip install black
+	poetry run pytest
 
 format/run:
-	black kata/ tests/
+	poetry run black .
+	poetry run isort .
