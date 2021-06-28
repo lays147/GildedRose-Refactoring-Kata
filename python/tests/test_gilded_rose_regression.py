@@ -36,9 +36,9 @@ def test_update_quality_case_one():
     items = [Item(name="Item", sell_in=2, quality=5)]
     gilded_rose = GildedRose(items)
     gilded_rose.update_quality()
-    assert gilded_rose.items[0].quality is 4
-    assert gilded_rose.items[0].sell_in is 1
-    assert gilded_rose.items[0].name is "Item"
+    assert gilded_rose.items[0].quality == 4
+    assert gilded_rose.items[0].sell_in == 1
+    assert gilded_rose.items[0].name == "Item"
 
 
 def test_update_quality_case_two():
@@ -73,9 +73,9 @@ def test_update_quality_case_two():
     items = [Item(name="Sulfuras, Hand of Ragnaros", sell_in=None, quality=80)]
     gilded_rose = GildedRose(items)
     gilded_rose.update_quality()
-    assert gilded_rose.items[0].quality is 80
-    assert gilded_rose.items[0].sell_in is None
-    assert gilded_rose.items[0].name is "Sulfuras, Hand of Ragnaros"
+    assert gilded_rose.items[0].quality == 80
+    assert gilded_rose.items[0].sell_in == None
+    assert gilded_rose.items[0].name == "Sulfuras, Hand of Ragnaros"
 
 
 def test_update_quality_case_four():
@@ -112,12 +112,12 @@ def test_update_quality_case_four():
     ]
     gilded_rose = GildedRose(items)
     gilded_rose.update_quality()
-    assert gilded_rose.items[0].quality is 50
-    assert gilded_rose.items[0].sell_in is 1
-    assert gilded_rose.items[0].name is "Aged Brie"
-    assert gilded_rose.items[1].quality is 50
-    assert gilded_rose.items[1].sell_in is 1
-    assert gilded_rose.items[1].name is "Backstage passes to a TAFKAL80ETC concert"
+    assert gilded_rose.items[0].quality == 50
+    assert gilded_rose.items[0].sell_in == 1
+    assert gilded_rose.items[0].name == "Aged Brie"
+    assert gilded_rose.items[1].quality == 50
+    assert gilded_rose.items[1].sell_in == 1
+    assert gilded_rose.items[1].name == "Backstage passes to a TAFKAL80ETC concert"
 
 
 def test_update_quality_case_five():
@@ -151,9 +151,9 @@ def test_update_quality_case_five():
     items = [Item(name="Aged Brie", sell_in=2, quality=40)]
     gilded_rose = GildedRose(items)
     gilded_rose.update_quality()
-    assert gilded_rose.items[0].quality is 41
-    assert gilded_rose.items[0].sell_in is 1
-    assert gilded_rose.items[0].name is "Aged Brie"
+    assert gilded_rose.items[0].quality == 41
+    assert gilded_rose.items[0].sell_in == 1
+    assert gilded_rose.items[0].name == "Aged Brie"
 
 
 def test_update_quality_case_six():
@@ -191,9 +191,9 @@ def test_update_quality_case_six():
     ]
     gilded_rose = GildedRose(items)
     gilded_rose.update_quality()
-    assert gilded_rose.items[0].quality is 41
-    assert gilded_rose.items[0].sell_in is 14
-    assert gilded_rose.items[0].name is "Backstage passes to a TAFKAL80ETC concert"
+    assert gilded_rose.items[0].quality == 41
+    assert gilded_rose.items[0].sell_in == 14
+    assert gilded_rose.items[0].name == "Backstage passes to a TAFKAL80ETC concert"
 
 
 def test_update_quality_case_seven():
@@ -232,9 +232,9 @@ def test_update_quality_case_seven():
     ]
     gilded_rose = GildedRose(items)
     gilded_rose.update_quality()
-    assert gilded_rose.items[0].quality is 42
-    assert gilded_rose.items[0].sell_in is 7
-    assert gilded_rose.items[0].name is "Backstage passes to a TAFKAL80ETC concert"
+    assert gilded_rose.items[0].quality == 42
+    assert gilded_rose.items[0].sell_in == 7
+    assert gilded_rose.items[0].name == "Backstage passes to a TAFKAL80ETC concert"
 
 
 def test_update_quality_case_eight():
@@ -277,9 +277,9 @@ def test_update_quality_case_eight():
     ]
     gilded_rose = GildedRose(items)
     gilded_rose.update_quality()
-    assert gilded_rose.items[0].quality is 43
-    assert gilded_rose.items[0].sell_in is 4
-    assert gilded_rose.items[0].name is "Backstage passes to a TAFKAL80ETC concert"
+    assert gilded_rose.items[0].quality == 43
+    assert gilded_rose.items[0].sell_in == 4
+    assert gilded_rose.items[0].name == "Backstage passes to a TAFKAL80ETC concert"
 
 
 def test_update_quality_case_nine():
@@ -320,9 +320,9 @@ def test_update_quality_case_nine():
     items = [Item(name="Item", sell_in=0, quality=5)]
     gilded_rose = GildedRose(items)
     gilded_rose.update_quality()
-    assert gilded_rose.items[0].quality is 3
-    assert gilded_rose.items[0].sell_in is -1
-    assert gilded_rose.items[0].name is "Item"
+    assert gilded_rose.items[0].quality == 3
+    assert gilded_rose.items[0].sell_in == -1
+    assert gilded_rose.items[0].name == "Item"
 
 
 def test_update_quality_case_ten():
@@ -363,9 +363,9 @@ def test_update_quality_case_ten():
     items = [Item(name="Sulfuras, Hand of Ragnaros", sell_in=None, quality=80)]
     gilded_rose = GildedRose(items)
     gilded_rose.update_quality()
-    assert gilded_rose.items[0].quality is 80
-    assert gilded_rose.items[0].sell_in is None
-    assert gilded_rose.items[0].name is "Sulfuras, Hand of Ragnaros"
+    assert gilded_rose.items[0].quality == 80
+    assert gilded_rose.items[0].sell_in == None
+    assert gilded_rose.items[0].name == "Sulfuras, Hand of Ragnaros"
 
 
 def test_update_quality_case_twelve():
@@ -406,9 +406,9 @@ def test_update_quality_case_twelve():
     ]
     gilded_rose = GildedRose(items)
     gilded_rose.update_quality()
-    assert gilded_rose.items[0].quality is 0
-    assert gilded_rose.items[0].sell_in is -1
-    assert gilded_rose.items[0].name is "Backstage passes to a TAFKAL80ETC concert"
+    assert gilded_rose.items[0].quality == 0
+    assert gilded_rose.items[0].sell_in == -1
+    assert gilded_rose.items[0].name == "Backstage passes to a TAFKAL80ETC concert"
 
 
 def test_update_quality_case_thirteen():
@@ -444,9 +444,9 @@ def test_update_quality_case_thirteen():
     items = [Item(name="Aged Brie", sell_in=0, quality=40)]
     gilded_rose = GildedRose(items)
     gilded_rose.update_quality()
-    assert gilded_rose.items[0].quality is 42
-    assert gilded_rose.items[0].sell_in is -1
-    assert gilded_rose.items[0].name is "Aged Brie"
+    assert gilded_rose.items[0].quality == 42
+    assert gilded_rose.items[0].sell_in == -1
+    assert gilded_rose.items[0].name == "Aged Brie"
 
 
 def test_update_quality_case_fourteen():
@@ -482,6 +482,6 @@ def test_update_quality_case_fourteen():
     items = [Item(name="Aged Brie", sell_in=0, quality=50)]
     gilded_rose = GildedRose(items)
     gilded_rose.update_quality()
-    assert gilded_rose.items[0].quality is 50
-    assert gilded_rose.items[0].sell_in is -1
-    assert gilded_rose.items[0].name is "Aged Brie"
+    assert gilded_rose.items[0].quality == 50
+    assert gilded_rose.items[0].sell_in == -1
+    assert gilded_rose.items[0].name == "Aged Brie"
